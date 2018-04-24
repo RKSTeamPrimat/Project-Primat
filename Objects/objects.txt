@@ -1,0 +1,4 @@
+*** Variables ***
+#MainPage
+${mainPageTitle}	Usnadníme ti studium – Primát.cz
+${googleTitle}    Google
