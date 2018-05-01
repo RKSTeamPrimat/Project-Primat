@@ -1,0 +1,30 @@
+*** Settings ***
+Documentation    File contains keyword for login into application
+Library          Selenium2Library
+Resource         ../Settings/Login_Settings.txt
+
+*** Keywords ***
+Login To Primat
+    [Arguments]    ${validLogin}  ${validPswd}
+    Open Login Form
+    Verify Login Form Displayed
+    Insert Credentials And Submit  ${validLogin}  ${validPswd}
+    
+Open Login Form
+    Wait Until Page Contains Element    ${loginLink} 
+    Click Element     ${loginLink}
+    
+Verify Login Form Displayed
+    Wait Until Page Contains Element    ${authFormLoginInput}
+    Wait Until Page Contains Element    ${authFormPswdInput}     
+    Wait Until Page Contains Element    ${authFormSubmitBtn} 
+
+Insert Credentials And Submit
+    [Arguments]    ${validLogin}  ${validPswd}
+    Input Text    ${authFormLoginInput}     ${validLogin}
+    Input Text    ${authFormPswdInput}    ${validPswd}
+    Click Element    ${authFormSubmitBtn}
+    
+Verify Alert Displayed
+    Wait Until Page Contains Element    ${alertForm} 
+    ### add text verification    

@@ -1,5 +1,0 @@
-*** Variables ***
-${urlMainPage}    https://www.primat.cz/
-${urlGoogle}      https://www.google.com/ 
-${browser}        chrome
-${findWord}       primat

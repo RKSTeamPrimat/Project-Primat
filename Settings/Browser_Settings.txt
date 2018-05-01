@@ -1,0 +1,8 @@
+*** Variables ***
+${urlMainPage}      https://www.primat.cz/
+${urlGoogle}        https://www.google.com/ 
+${browser}          chrome
+${findWord}         primat
+${googleInput}      //input[@id="lst-ib"] 
+${googleSearchBtn}  //input[@value="Hledat Googlem"]
+${userManual}       //a[@href="https://www.primat.cz/uzivatelska-prirucka"]

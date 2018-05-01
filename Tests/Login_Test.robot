@@ -1,0 +1,24 @@
+*** Settings ***
+Documentation    This test suite verifies user manual in primat page
+Library          Selenium2Library    
+Resource         ../Keywords/Browser_Keywords.txt
+Resource         ../Keywords/User_Profile_Keywords.txt
+Resource         ../Keywords/Login_Keywords.txt
+Resource         ../Objects/User_Credentials.txt
+
+Test Setup       Open Primat To Main Page
+Test Teardown    Close All Browsers
+
+*** Test Cases ***
+Valid Login To Primat
+    Login To Primat    ${validLogin}    ${validPswd}
+    Sleep  5
+    Verify User Profile Page Loaded
+
+### Tries invalid credentials + blank
+Invalid Login To Primat
+    Login To Primat    ${invalidLogin}    ${invalidPswd}
+    Verify Alert Displayed
+    
+### Add blank login test
+    

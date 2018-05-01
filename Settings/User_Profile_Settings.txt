@@ -1,0 +1,4 @@
+***Variables***
+${userInfo}            //div[@class="user-status__info"]
+${navigationMenu}      //div[@class="navigation__sides"] 
+${nvgProfileInfo}      //div[@class="navigation__nwm"]

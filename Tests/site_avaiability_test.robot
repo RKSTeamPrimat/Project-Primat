@@ -1,13 +1,14 @@
 *** Settings ***
 Library    Selenium2Library
-Resource   ../Keywords/keywords.txt
+Resource   ../Keywords/Browser_Keywords.txt
 
 *** Test Cases ***
 Google search for primat
     Search for primat on google
+    Go To Primat From Google
     Close All Browsers
     
 Open main page
-    Open primat to main page
+    Open Primat To Main Page
     Close All Browsers
         

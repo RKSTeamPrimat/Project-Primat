@@ -1,0 +1,33 @@
+*** Settings ***
+Library    Selenium2Library
+Resource   ../Settings/Browser_Settings.txt
+Resource   ../Keywords/Browser_Keywords.txt  
+Resource   ../Objects/objects.txt
+
+*** Keyword ***
+Open And Maximize Browser 
+    [Arguments]  ${urlMainPage} 
+    open browser   ${urlMainPage}    ${browser} 
+    maximize browser window
+    
+Open Primat To Main Page
+    Open And Maximize Browser   ${urlMainPage} 
+    sleep  10
+    title should be    ${mainPageTitle}
+    
+Search For Primat On Google
+    Open And Maximize Browser  ${urlGoogle} 
+    title should be    ${googleTitle}
+    Wait Until Page Contains Element     ${googleInput} 
+    Input Text    ${googleInput}    ${findWord}
+    Click Element    ${googleInput}   
+    Wait Until Page Contains Element     ${googleSearchBtn}  
+    Click Element    ${googleSearchBtn}
+    
+Go To Primat From Google
+    wait until page contains    ${urlMainPage}
+    click link    ${urlMainPage}
+
+Go To User Manual From Google
+    Wait Until Page Contains Element    ${userManual}
+    click element    ${userManual}

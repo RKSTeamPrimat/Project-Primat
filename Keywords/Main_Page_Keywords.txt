@@ -1,0 +1,19 @@
+*** Settings ***
+Library    Selenium2Library
+Resource    ../Settings/Main_Page_Settings.txt
+
+*** Keyword ***
+Go To User Manual
+    Close Cookie Agrrement
+    Wait Until Page Contains Element  ${userManualLink}
+    Click Element     ${userManualLink}
+    Verify User Manual Page Displayed
+    
+Verify User Manual Page Displayed
+    Title Should Be   ${userManualTitle}
+    ### Add title verification
+    
+Close Cookie Agrrement
+    Wait Until Page Contains Element    ${cookiesBar} 
+    Click Element    ${cookiesOKBtn} 
+    Wait Until Page Does Not Contain Element    ${cookiesBar} 

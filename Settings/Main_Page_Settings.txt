@@ -1,0 +1,8 @@
+*** Settings ***
+Documentation    File contains variables for main page tests
+
+*** Variables ***
+${userManualTitle}        vdf
+${userManualLink}         //a[@href="/uzivatelska-prirucka"]
+${cookiesBar}             //div[@class="cookies-bar cookies-bar--visible"]
+${cookiesOKBtn}           //button[contains(.,"OK")]
