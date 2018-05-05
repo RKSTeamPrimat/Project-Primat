@@ -2,9 +2,11 @@
 Documentation    File contains keywords for User Profile Page
 Library          Selenium2Library
 Resource         ../Settings/User_Profile_Settings.txt
+Resource         ../Objects/User_Credentials.txt
 
 *** Keywords ***
 Verify User Profile Page Loaded
     Wait Until Page Contains Element    ${userInfo}    
     Wait Until Page Contains Element    ${navigationMenu}   
     Wait Until Page Contains Element    ${nvgProfileInfo}     
+    Page Should Contain    ${validLogin}    

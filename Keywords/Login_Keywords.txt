@@ -7,17 +7,21 @@ Resource         ../Settings/Login_Settings.txt
 Login To Primat
     [Arguments]    ${validLogin}  ${validPswd}
     Open Login Form
-    Verify Login Form Displayed
     Insert Credentials And Submit  ${validLogin}  ${validPswd}
     
 Open Login Form
     Wait Until Page Contains Element    ${loginLink} 
     Click Element     ${loginLink}
+    Verify Login Form Displayed
     
 Verify Login Form Displayed
+    Wait Until Page Contains  ${authFormTitle} 
     Wait Until Page Contains Element    ${authFormLoginInput}
+    Page Should Contain    ${authFormLoginText}    
     Wait Until Page Contains Element    ${authFormPswdInput}     
+    Page Should Contain    ${authFormPswdText}    
     Wait Until Page Contains Element    ${authFormSubmitBtn} 
+    Page Should Contain    ${authFormBtnText}    
 
 Insert Credentials And Submit
     [Arguments]    ${validLogin}  ${validPswd}
@@ -27,4 +31,8 @@ Insert Credentials And Submit
     
 Verify Alert Displayed
     Wait Until Page Contains Element    ${alertForm} 
-    ### add text verification    
+    ### add text verification   
+    
+Enable Input Validation For Login Without Param Test
+    Execute Javascript    document.getElementById('auth_login_form_email').required = true; 
+    Execute Javascript    document.getElementById('auth_login_form_password').required = true; 

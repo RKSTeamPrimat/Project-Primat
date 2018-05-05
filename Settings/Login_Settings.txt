@@ -4,3 +4,7 @@ ${authFormLoginInput}     auth_login_form_email
 ${authFormPswdInput}      auth_login_form_password
 ${authFormSubmitBtn}      auth_login_form_save
 ${alertForm}              //div[@class="form__alert"]
+${authFormBtnText}        Přihlas se
+${authFormTitle}          Vítej zpět
+${authFormLoginText}      E-mail nebo uživatelské jméno
+${authFormPswdText}       Heslo

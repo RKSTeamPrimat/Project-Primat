@@ -12,13 +12,21 @@ Test Teardown    Close All Browsers
 *** Test Cases ***
 Valid Login To Primat
     Login To Primat    ${validLogin}    ${validPswd}
-    Sleep  5
+    Sleep  10
     Verify User Profile Page Loaded
 
-### Tries invalid credentials + blank
 Invalid Login To Primat
     Login To Primat    ${invalidLogin}    ${invalidPswd}
     Verify Alert Displayed
     
-### Add blank login test
+Invalid Login To Primat - blank parameters
+    Login To Primat    ${blank}    ${blank}
+    Verify Login Form Displayed  
+
+### JS nefunguje v prohlizece ze skolniho pocitace
+# Invalid Login To Primat - blank parameters - JS 
+    # Open Login Form
+    # Enable Input Validation For Login Without Param Test
+    # Insert Credentials And Submit    ${blank}    ${blank}
+    # Verify Alert Displayed
     

@@ -2,7 +2,14 @@
 Documentation    File contains variables for main page tests
 
 *** Variables ***
-${userManualTitle}        vdf
+${userManualTitle}        Uživatelská příručka –  Primát.cz
 ${userManualLink}         //a[@href="/uzivatelska-prirucka"]
 ${cookiesBar}             //div[@class="cookies-bar cookies-bar--visible"]
 ${cookiesOKBtn}           //button[contains(.,"OK")]
+${registrationLoginSec}   Registrace a přihlášení
+${bananasSec}             Banány
+${giftsSec}               Dárky a odměny
+${carmaSec}               Karma
+${commentsEvlSec}         Komentáře a hodnoceni
+${materialsSec}           Materiály
+${paymnetsSec}            Platby

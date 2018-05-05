@@ -16,4 +16,7 @@ Verify User Manual Link From Google
    Go To User Manual From Google
    Verify User Manual Page Displayed
    
-### add test verify user manual content
+Verify User Manual Content
+   Open Primat To Main Page
+   Go To User Manual 
+   Verify User Manual Sections

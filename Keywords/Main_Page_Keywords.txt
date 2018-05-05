@@ -11,9 +11,17 @@ Go To User Manual
     
 Verify User Manual Page Displayed
     Title Should Be   ${userManualTitle}
-    ### Add title verification
     
 Close Cookie Agrrement
     Wait Until Page Contains Element    ${cookiesBar} 
     Click Element    ${cookiesOKBtn} 
     Wait Until Page Does Not Contain Element    ${cookiesBar} 
+    
+Verify User Manual Sections
+    Page Should Contain Element    //h2[text()='${registrationLoginSec}']    
+    Page Should Contain Element    //h2[text()='${bananasSec}']   
+    Page Should Contain Element    //h2[text()='${giftsSec}']  
+    Page Should Contain Element    //h2[text()='${carmaSec}']  
+    Page Should Contain Element    //h2[text()='${commentsEvlSec}']   
+    Page Should Contain Element    //h2[text()='${materialsSec}']  
+    Page Should Contain Element    //h2[text()='${paymnetsSec}']   
