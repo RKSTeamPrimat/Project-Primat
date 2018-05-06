@@ -1,0 +1,45 @@
+*** Settings ***
+Documentation    File contains keyword for login into application
+Library          Selenium2Library
+Library          String    
+Resource         ../Settings/Browser_Settings.txt
+Resource         ../Settings/Material_Settings.txt
+
+*** Keywords ***
+Logout From Primat
+    Go To    ${urlLogoutPage}
+    Wait Until Page Contains Element    ${closeModal}    
+    Click Element    ${closeModal}
+Find Material
+    [Arguments]   ${materialName}
+    Go to     ${urlSearchPage}
+    Wait Until Page Contains Element    ${search}    
+    Click Element    ${materialLink}
+    Input Text    ${searchTextField}     ${materialName}
+    Press Key    ${searchTextField}    ${\n}
+    Wait Until Page Contains Element    ${searchResult}  
+    Click Element    ${searchResult}    
+Validate Guest Warning
+    Wait Until Page Contains Element    ${guestWarning}
+Check Thumbs Presence
+    Wait Until Page Contains Element    ${like}
+    Wait Until Page Contains Element   ${dislike}   
+Check Favorite Button
+    Element should not have class    ${favoriteButton}    ${favoriteButtonNotTicked}   
+Element should not have class
+    [Arguments]  ${element}  ${className}
+    Wait Until Page Does Not Contain Element  ${element}[contains(@class, '${className}')]     error=${favoriteButtonMessage}
+Check Material In Favorites
+    [Arguments]    ${urlMaterialDetail}
+    Go to    ${urlFavoriteMaterials}
+    Wait Until Page Contains Element    xpath=//a[@href="${urlMaterialDetail}"]    
+Add Material To Favorites
+    ${urlMaterialDetail}=    Get Location
+    ${urlMaterialDetail}=    Replace String    ${urlMaterialDetail}    ${urlMainPage}    /   
+    Execute Javascript    ${closeModalScript}
+    Execute Javascript    ${closeCookieBar} 
+    Wait Until Element Is Visible    ${favoriteButton}  
+    Click Element    ${favoriteButton}
+    [Return]    ${urlMaterialDetail}
+ 
+     
