@@ -1,0 +1,22 @@
+*** Variables ***
+${closeModal}              class=modal__close
+${materialName}            chemie
+${urlLogoutPage}    https://www.primat.cz/odhlaseni
+${urlSearchPage}    https://www.primat.cz/vyhledavani
+${materialLink}    xpath=/html/body/div[6]/div/div[1]/div/div/div/div[1]/div/span[6]
+${search}    class=search
+${searchTextField}    class=search__text-field
+${searchResult}    xpath=/html/body/div[6]/div/div[1]/div/div/div/div[2]/div[2]/a[1]
+${guestWarning}    class=guest-overlay__warning 
+${username}    pakandl1@seznam.cz
+${pass}    A1RGE0Hd
+${downloadButton}    id=material_save
+${like}    xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[3]/div/a[1]
+${dislike}    xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[3]/div/a[2]
+${favoriteButton}   xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[4]/div[1]/a
+${favoriteButtonNotTicked}    button--ticked
+${favoriteButtonMessage}    Material is probably already in favorites
+${urlFavoriteMaterials}    https://www.primat.cz/oblibene/materialy
+${urlMaterialDetail}
+${closeModalScript}    if(document.querySelector('.modal__close')){document.querySelector('.modal__close').click();}
+${closeCookieBar}    if(document.querySelector('.cookies-bar--visible')){document.querySelector('.cookies-bar__button').click();}
