@@ -1,6 +1,7 @@
 *** Settings ***
 Library    Selenium2Library
 Resource    ../Settings/Main_Page_Settings.txt
+Resource    ../Objects/Objects.txt
 
 *** Keyword ***
 Go To User Manual
