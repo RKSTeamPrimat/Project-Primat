@@ -2,3 +2,22 @@
 #MainPage
 ${mainPageTitle}	Usnadníme ti studium – Primát.cz
 ${googleTitle}    Google
+${userCount}    xpath=/html/body/div[4]/div[2]/div[3]/div[2]/div[2]/b
+${seznamSkol}   xpath=/html/body/div[4]/footer/div[1]/div[1]/ul/li[1]/a
+${uzivatelskaPrirucka}   xpath=/html/body/div[4]/footer/div[1]/div[1]/ul/li[2]/a
+${blog}                  xpath=/html/body/div[4]/footer/div[1]/div[1]/ul/li[3]/a
+${darky}                 xpath=/html/body/div[4]/footer/div[1]/div[1]/ul/li[4]/a
+${kontakt}               xpath=/html/body/div[4]/footer/div[1]/div[2]/ul/li[1]/a
+${oNas}                  xpath=/html/body/div[4]/footer/div[1]/div[2]/ul/li[2]/a
+${podminkyUzivani}       xpath=/html/body/div[4]/footer/div[1]/div[2]/ul/li[3]/a
+${urlseznamSkol}         /skoly
+${urluzivatelskaPrirucka}         /uzivatelska-prirucka
+${urlblog}                        /blog
+${urldarky}                       /darky
+${urlkontakt}                     /kontakty
+${urloNas}                        /o-nas
+${urlpodminkyUzivani}             /podminky-uzivani
+${cookies}             xpath=/html/body/div[5]/div/button/div/span
+${searchField}         xpath=/html/body/div[4]/div[1]/div[2]/div/div[1]/a
+${searchBox}           xpath=/html/body/div[7]/div/div[1]/div/div/div/div[2]/div[1]/input
+${vse}                 vse
