@@ -1,0 +1,20 @@
+*** Settings ***
+Library    Selenium2Library
+Resource   ../Settings/Content_Teachers_Settings.txt
+Resource   ../Keywords/Content_Teachers_Keywords.txt
+
+*** Keyword ***
+
+Go To Teachers Page
+    Close Cookie Agreement
+    Wait Until Page Contains Element  ${urlTeachers}
+    Click Element     ${urlTeachers}
+    Verify Teachers Page Displayed
+
+Verify Teachers Page Displayed
+    Title Should Be   ${teachersPageTitle}
+
+Verify Teachers Page Variables
+    Page Should Contain Element    ${teachersFavorites}
+    Page Should Contain Element    ${teachersAdd}
+    Page Should Contain Element    ${teachersSearch}

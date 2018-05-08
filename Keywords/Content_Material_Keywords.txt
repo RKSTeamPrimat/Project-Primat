@@ -1,0 +1,22 @@
+*** Settings ***
+Library    Selenium2Library
+Resource   ../Settings/Content_Material_Settings.txt
+Resource   ../Keywords/Content_Material_Keywords.txt
+
+*** Keyword ***
+
+Go To Material Page
+    Close Cookie Agreement
+    Wait Until Page Contains Element  ${urlMaterials}
+    Click Element     ${urlMaterials}
+    Verify User Manual Page Displayed
+
+Verify Material Page Displayed
+    Title Should Be   ${materialPageTitle}
+
+Verify Material Page Variables
+    Page Should Contain Element    ${materialFavorites}
+    Page Should Contain Element    ${materialDownloads}
+    Page Should Contain Element    ${materialTaped}
+    Page Should Contain Element    ${materialAdd}
+    Page Should Contain Element    ${materialSearch}

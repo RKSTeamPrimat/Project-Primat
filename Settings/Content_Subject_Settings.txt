@@ -1,0 +1,6 @@
+*** Variables ***
+${urlSubject}   https://www.primat.cz/studium/predmety
+${subjectPageTitle}   Předměty
+${subjectSearch}   //a[@href="/vyhledavani/predmety"]
+${subjectAdd}      //a[@href="/pridani-obsahu/predmet/fakulta-nezadano/ucitel"]
+${subjectFavorites}   //a[@href="/oblibene/predmety"]

@@ -1,0 +1,20 @@
+*** Settings ***
+Library    Selenium2Library
+Resource   ../Settings/Content_Subject_Settings.txt
+Resource   ../Keywords/Content_Subject_Keywords.txt
+
+*** Keyword ***
+
+Go To Subject Page
+    Close Cookie Agreement
+    Wait Until Page Contains Element  ${urlSubject}
+    Click Element     ${urlSubject}
+    Verify Subject Page Displayed
+
+Verify Subject Page Displayed
+    Title Should Be   ${subjectPageTitle}
+
+Verify Subject Page Variables
+    Page Should Contain Element    ${subjectSearch}
+    Page Should Contain Element    ${subjectAdd}
+    Page Should Contain Element    ${subjectFavorites}
