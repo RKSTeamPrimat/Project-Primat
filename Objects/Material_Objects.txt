@@ -1,0 +1,12 @@
+*** Variables ***
+${like}    xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[3]/div/a[1]
+${dislike}    xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[3]/div/a[2]
+${favoriteButton}   xpath=/html/body/div[4]/div[2]/div[2]/div/div[1]/div/div[4]/div[1]/a
+${materialLink}    xpath=/html/body/div[6]/div/div[1]/div/div/div/div[1]/div/span[6]
+${searchTextField}    class=search__text-field
+${searchResult}    xpath=/html/body/div[6]/div/div[1]/div/div/div/div[2]/div[2]/a[1]
+${guestWarning}    class=guest-overlay__warning 
+${downloadButton}    id=material_save
+${favoriteButtonNotTicked}    button--ticked
+${search}    class=search
+${closeModal}    class=modal__close
