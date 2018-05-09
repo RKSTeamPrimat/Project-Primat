@@ -6,6 +6,7 @@ Resource         ../Keywords/User_Profile_Keywords.txt
 Resource         ../Keywords/Login_Keywords.txt
 Resource         ../Keywords/Material_Keywords.txt
 Resource         ../Objects/User_Credentials.txt
+Resource         ../Objects/Material_Objects.txt
 
 Test Setup       Open Primat To Main Page
 Test Teardown    Close All Browsers
@@ -13,24 +14,24 @@ Test Teardown    Close All Browsers
 *** Test Cases ***
  Non Registered User Access To Material
     Logout From Primat
-    Find Material    chemie
+    Find Material    ${materialName}
     Validate Guest Warning 
     
 Registered User Material Detail Page Content
-    Login To Primat    ${username}    ${pass}
+    Login To Primat    ${validLogin}  ${validPswd}
     Verify User Profile Page Loaded
-    Find Material    chemie
+    Find Material    ${materialName}
     Wait Until Page Contains Element   ${downloadButton}    
     Check Thumbs Presence
     Check Favorite Button
       
 Add Material To Favorites
-    Login To Primat    ${username}    ${pass}
+    Login To Primat    ${validLogin}  ${validPswd}
     Verify User Profile Page Loaded
-    Find Material    chemie
+    Find Material    ${materialName}
     Check Favorite Button
-    ${us}=    Add Material To Favorites
-    Check Material In Favorites    ${us}
+    ${detail}=    Add Material To Favorites
+    Check Material In Favorites    ${detail}
     
     
     
