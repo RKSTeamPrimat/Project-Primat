@@ -1,0 +1,78 @@
+*** Settings ***
+Library        Selenium2Library
+Resource       ../Objects/User_Content_Objects.txt
+Resource       ../Keywords/Material_Keywords.txt
+
+*** Keywords ***
+Check Navigation Panel Links
+    Page Should Contain Link    ${urlSearch} 
+    Check Navigation My Study
+    Check Navigation Favourites  
+
+Check Navigation My Study
+    Click My Study Navigation
+    Page Should Contain Link    ${urlBananas}
+    Page Should Contain Link    ${urlMyGifts}
+    Page Should Contain Link    ${urlSettings}
+    Page Should Contain Link    ${urlLogout}
+    Page Should Contain Link    ${urlAddContent}
+
+Check Navigation Favourites
+    Click Favourites Navigation
+    Page Should Contain Link    ${urlFavouriteArticles}
+    Page Should Contain Link    ${urlFavouriteGifts}
+    Page Should Contain Link    ${urlFavouriteMaterials}
+    Page Should Contain Link    ${urlFavouriteSubjects}
+    Page Should Contain Link    ${urlFavouriteUsers}
+    Page Should Contain Link    ${urlFavouriteTeachers}
+
+Check Navigation Bananas Count
+    Page Should Contain Element    ${bananasCountDiv} 
+    
+Check Navigation Nickname
+    Page Should Contain Element    ${profileNicknameDiv}
+
+Check Navigation To Bananas Page
+    Wait Until Page Contains Element    ${bananasCountDiv} 
+    Page Should Contain Element    ${bananasCountDiv}      
+    Click Element    ${bananasLinkElement}
+    Execute Javascript    ${closeModalScript}
+    Wait Until Page Contains Element   ${offersDiv}    
+
+Click My Study Navigation
+    Page Should Contain Element    ${myStudyNavigationDiv} 
+    Click Element    ${myStudyNavigationDiv}    
+
+Click Favourites Navigation
+    Page Should Contain Element    ${favouriteNavigationDiv} 
+    Click Element    ${favouriteNavigationDiv}
+
+Check ClickThrough Page Availability
+    [Arguments]   ${linkElement}    ${targetUrl}
+    Page Should Contain Element    ${linkElement}  
+    Click Element    ${linkElement}
+    Location Should Contain    ${targetUrl}
+    Go Back
+
+Check My Study Materials Through Navigation Is Available
+    Click My Study Navigation
+    Check ClickThrough Page Availability    ${materialsNavigationLinkElement}    ${urlStudyMaterials}
+
+Check My Study Subjects Through Navigation Is Available
+    Click My Study Navigation
+    Check ClickThrough Page Availability    ${subjectsNavigationLinkElement}    ${urlStudySubjects}
+
+Check My Study Teachers Through Navigation Is Available
+    Click My Study Navigation
+    Check ClickThrough Page Availability    ${teachersNavigationLinkElement}    ${urlStudyTeachers}
+
+Check My Study Schools Through Navigation Is Available
+    Click My Study Navigation
+    Check ClickThrough Page Availability    ${schoolsNavigationLinkElement}    ${urlStudySchools}
+
+Verify Main Page
+    Wait Until Page Contains Element   xpath=//div[contains(@class, 'tasks')] 
+
+    
+
+    
