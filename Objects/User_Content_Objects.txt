@@ -1,0 +1,28 @@
+*** Variables ***
+${bananasCountDiv}    xpath=//div[contains(@class, 'navigation__count')]
+${bananasLinkElement}    xpath=//div[contains(@class,'navigation__side')]//a[contains(@href, '/nakupy')]
+${profileNavigationDiv}    xpath=//div[contains(@class, 'navigation__item--with-photo')]
+${profileNicknameDiv}    xpath=//div[contains(@class,'navigation__item--with-photo')]//div[contains(@class,'navigation__nwm')]//div[contains(@class,'navigation__label')]
+${offersDiv}    xpath=//div[contains(@class, 'offers')]
+${materialsNavigationLinkElement}    xpath=//a[contains(@href,'/studium/materialy')]
+${subjectsNavigationLinkElement}    xpath=//a[contains(@href,'/studium/predmety')]
+${teachersNavigationLinkElement}	xpath=//a[contains(@href,'/studium/vyucujici')]
+${schoolsNavigationLinkElement}    xpath=//a[contains(@href,'/studium/skoly')]
+${myStudyNavigationDiv}    xpath=//div[contains(text(),'Moje studium')]/parent::*/parent::div[contains(@class, 'navigation__item')]
+${favouriteNavigationDiv}    xpath=//div[contains(@data-balloon,'Oblíbené')]
+${urlSearch}    /vyhledavani
+${urlFavouriteArticles}    /oblibene/clanky
+${urlFavouriteGifts}    /oblibene/darky
+${urlFavouriteMaterials}    /oblibene/materialy
+${urlFavouriteSubjects}    /oblibene/predmety
+${urlFavouriteUsers}    /oblibene/uzivatele
+${urlFavouriteTeachers}    /oblibene/vyucujici
+${urlBananas}    /nakupy
+${urlMyGifts}    /moje-darky
+${urlSettings}    /nastaveni
+${urlLogout}    /odhlaseni
+${urlAddContent}    /pridani-obsahu
+${urlStudyMaterials}    /studium/materialy
+${urlStudySubjects}    /studium/predmety
+${urlStudyTeachers}    /studium/vyucujici
+${urlStudySchools}    /studium/skoly
