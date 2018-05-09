@@ -1,9 +1,10 @@
 *** Settings ***
-Documentation    File contains keyword for login into application
+Documentation    File contains keyword for material tests
 Library          Selenium2Library
 Library          String    
 Resource         ../Settings/Browser_Settings.txt
 Resource         ../Settings/Material_Settings.txt
+Resource         ../Objects/Material_Objects.txt
 
 *** Keywords ***
 Logout From Primat
