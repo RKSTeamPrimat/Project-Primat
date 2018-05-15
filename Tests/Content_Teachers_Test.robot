@@ -3,8 +3,9 @@ Documentation    This test suite verifies content on teachers page
 Library          Selenium2Library
 Resource         ../Keywords/Content_Teachers_Keywords.txt
 Resource         ../Keywords/Main_Page_Keywords.txt
+Resource         ../Keywords/Browser_Keywords.txt
 
-Test Setup       Open Primat To Teachers Page
+Test Setup       Open Primat To Main Page
 Test Teardown    Close All Browsers
 
 *** Test Cases ***

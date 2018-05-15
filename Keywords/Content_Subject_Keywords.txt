@@ -2,6 +2,7 @@
 Library    Selenium2Library
 Resource   ../Settings/Content_Subject_Settings.txt
 Resource   ../Keywords/Content_Subject_Keywords.txt
+Resource         ../Settings/Browser_Settings.txt
 
 *** Keyword ***
 

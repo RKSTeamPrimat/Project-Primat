@@ -1,6 +1,6 @@
 *** Variables ***
-${urlTeachers}   https://www.primat.cz/studium/vyucujici
-${teachersPageTitle}   Vyučující
-${teachersFavorites}   //a[@href="/oblibene/vyucujici"]
-${teachersAdd}      //a[@href="/pridani-obsahu/vyucujici/fakulta-nezadano/predmet"]
-${teachersSearch}   //a[@/vyhledavani/vyucujici"]
+${urlTeachers}  https://www.primat.cz/studium/vyucujici
+${teachersPageTitle}    Vyučující
+${teachersFavorites}    //a[@href="/oblibene/vyucujici"]
+${teachersAdd}  //a[@href="/pridani-obsahu/vyucujici/fakulta-nezadano/predmet"]
+${teachersSearch}   //a[@href="/vyhledavani/vyucujici"]

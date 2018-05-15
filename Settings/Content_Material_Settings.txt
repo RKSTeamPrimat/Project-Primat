@@ -1,8 +1,8 @@
 *** Variables ***
-${urlMaterials}   https://www.primat.cz/studium/materialy
-${materialPageTitle}   Materiály
-${materialFavorites}  //a[@href="/oblibene/materialy"]
-${materialDownloads}  //a[@href="/studium/stazene-materialy"]
-${materialTaped}      //a[@href="/studium/nahrane-materialy"]
+${urlMaterials} https://www.primat.cz/studium/materialy
+${materialPageTitle}    Materiály
+${materialFavorites}    //a[@href="/oblibene/materialy"]
+${materialDownloads}    //a[@href="/studium/stazene-materialy"]
+${materialTaped}    //a[@href="/studium/nahrane-materialy"]
 ${materialAdd}  //a[@href="/pridani-obsahu/material"]
-${materialSearch}  //a[@href="/vyhledavani/materialy"]
+${materialSearch}   //a[@href="/vyhledavani/materialy"]
